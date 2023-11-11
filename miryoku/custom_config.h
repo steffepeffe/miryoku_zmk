@@ -1,6 +1,6 @@
 // Copyright 2021 Manna Harbour
 // https://github.com/manna-harbour/miryoku
-
+#include <behaviors.dtsi>
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/swedish.dtsi"
 
