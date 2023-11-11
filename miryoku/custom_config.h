@@ -2,6 +2,7 @@
 // https://github.com/manna-harbour/miryoku
 
 /* ZMK_UNICODE */
+#define ZMK_HELPER_STRINGIFY(x) #x
 
 #if !defined OS_UNICODE_LEAD
     #if HOST_OS == 2
