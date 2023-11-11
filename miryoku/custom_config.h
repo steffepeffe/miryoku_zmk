@@ -59,9 +59,9 @@
     UC_MODMORPH(name, &name ## _lower, &name ## _upper)
 
 /* Swedish letters */
-ZMK_UNICODE_PAIR(sv_ao,   N0, N0,  E, N5,   N0, N0,  C, N5) // Å
-ZMK_UNICODE_PAIR(sv_ae,   N0, N0,  E, N4,   N0, N0,  C, N4) // Ä
-ZMK_UNICODE_PAIR(sv_oe,   N0, N0,  F, N6,   N0, N0,  D, N6) // Ö
+ZMK_UNICODE_PAIR(sv_ao,   N0, N0,  E, N5,   N0, N0,  C, N5)
+ZMK_UNICODE_PAIR(sv_ae,   N0, N0,  E, N4,   N0, N0,  C, N4)
+ZMK_UNICODE_PAIR(sv_oe,   N0, N0,  F, N6,   N0, N0,  D, N6)
 
 #if defined (MIRYOKU_KEYBOARD_CORNE)
 
