@@ -9,6 +9,8 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #include "miryoku.h"
+#include "../zmk-nodefree-config/helper.h"
+#include "../zmk-nodefree-config/international_chars/swedish.dtsi"
 
 / {
   keymap {
