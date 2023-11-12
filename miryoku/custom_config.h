@@ -20,7 +20,7 @@
      XXX  K00  K01  K02  K03  K04       K05  K06  K07  K08  K09  &sv_ao \
      XXX  K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  &sv_ae \
 &kp LGUI  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  &kp SQT \
-               K32  K33  K34       K35  K36  K37
+                    K32  K33  K34       K35  K36  K37
 
 #define MIRYOKU_LAYERMAPPING_NAV( \
      K00, K01, K02, K03, K04,      K05, K06, K07, K08, K09, \
@@ -30,7 +30,7 @@
 ) \
 XXX  K00  K01  K02  K03  K04       K05  K06  K07  K08  K09  XXX \
 XXX  K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  XXX \
-XXX  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  &dt_right \
+XXX  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  dt_right \
                K32  K33  K34       K35  K36  K37
 
 #endif
@@ -45,5 +45,5 @@ U_NP,              U_NP,              U_LT(U_MEDIA, ESC),U_LT(U_NAV, TAB),U_LT(U
 #define MIRYOKU_LAYER_NAV \
 U_BOOT,            &u_to_U_TAP,       &u_to_U_EXTRA,     &u_to_U_BASE,      U_NA,              U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
 &kp LGUI,          &kp LALT,          &kp LCTRL,         &kp LSHFT,         U_NA,              &u_caps_word,      &kp LEFT,          &kp DOWN,          &kp UP,            &kp RIGHT,         \
-U_NA,              &kp RALT,          &u_to_U_NUM,       &u_to_U_NAV,       U_NA,              &dt_left,          &kp HOME,          &kp PG_DN,         &kp PG_UP,         &kp END,           \
+U_NA,              &kp RALT,          &u_to_U_NUM,       &u_to_U_NAV,       U_NA,              dt_left,           &kp HOME,          &kp PG_DN,         &kp PG_UP,         &kp END,           \
 U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              &kp RET,           &kp BSPC,          &kp DEL,           U_NP,              U_NP
