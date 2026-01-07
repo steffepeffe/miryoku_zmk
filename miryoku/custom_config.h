@@ -1,6 +1,7 @@
 // Copyright 2021 Manna Harbour
 // https://github.com/manna-harbour/miryoku
 #include <behaviors.dtsi>
+#include <behaviors/unicode.dtsi>
 #include "../zmk-nodefree-config/helper.h"
 
 #if defined (MIRYOKU_KEYBOARD_CORNE)
