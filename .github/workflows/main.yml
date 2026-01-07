@@ -292,6 +292,9 @@ jobs:
             modules_arg="-DZMK_EXTRA_MODULES=\"$module_dirs\""
             echo "modules_arg=$modules_arg" >> $GITHUB_OUTPUT
           fi
+
+          modules_arg="-DZMK_EXTRA_MODULES=\"$GITHUB_WORKSPACE/modules/zmk-unicode\""
+          echo "modules_arg=$modules_arg" >> $GITHUB_OUTPUT
           echo "::endgroup::"
       - name: cache
         if: true
