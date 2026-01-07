@@ -294,7 +294,7 @@ jobs:
             echo "modules_arg=$modules_arg" >> $GITHUB_OUTPUT
           fi
 
-          modules_arg="-DZMK_EXTRA_MODULES=\"$GITHUB_WORKSPACE/modules/zmk-unicode/\""
+          modules_arg="-DZMK_EXTRA_MODULES=\"$GITHUB_WORKSPACE/miryoku_zmk/modules/zmk-unicode/\""
           echo "modules_arg=$modules_arg" >> $GITHUB_OUTPUT
           echo "::endgroup::"
       - name: cache
@@ -310,11 +310,11 @@ jobs:
       - name: Debug zmk-unicode module
         run: |
           set -eux
-          ls -la $GITHUB_WORKSPACE/modules || true
-          ls -la $GITHUB_WORKSPACE/modules/zmk-unicode || true
-          ls -la $GITHUB_WORKSPACE/modules/zmk-unicode/zephyr || true
-          test -f $GITHUB_WORKSPACE/modules/zmk-unicode/zephyr/module.yml || true
-          sed -n '1,120p' $GITHUB_WORKSPACE/modules/zmk-unicode/zephyr/module.yml
+          ls -la $GITHUB_WORKSPACE/miryoku_zmk/modules || true
+          ls -la $GITHUB_WORKSPACE/miryoku_zmk/modules/zmk-unicode || true
+          ls -la $GITHUB_WORKSPACE/miryoku_zmk/modules/zmk-unicode/zephyr || true
+          test -f $GITHUB_WORKSPACE/miryoku_zmk/modules/zmk-unicode/zephyr/module.yml || true
+          sed -n '1,120p' $GITHUB_WORKSPACE/miryoku_zmk/modules/zmk-unicode/zephyr/module.yml
       - name: build
         run: |
           if [ "$MIRYOKU_DEBUG" = 'MIRYOKU_DEBUG_TRUE' ]
