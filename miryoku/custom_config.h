@@ -2,6 +2,7 @@
 // https://github.com/manna-harbour/miryoku
 #include <behaviors.dtsi>
 #include "../zmk-nodefree-config/helper.h"
+#include <behaviors/unicode.dtsi>
 
 #if defined (MIRYOKU_KEYBOARD_CORNE)
 
