@@ -294,7 +294,7 @@ jobs:
             echo "modules_arg=$modules_arg" >> $GITHUB_OUTPUT
           fi
 
-          modules_arg="-DZMK_EXTRA_MODULES=\"$GITHUB_WORKSPACE/modules/zmk-unicode\""
+          modules_arg="-DZMK_EXTRA_MODULES=\"$GITHUB_WORKSPACE/modules/zmk-unicode/\""
           echo "modules_arg=$modules_arg" >> $GITHUB_OUTPUT
           echo "::endgroup::"
       - name: cache
@@ -307,6 +307,14 @@ jobs:
           key: zephyr ${{ runner.os }} ${{ hashFiles('zmk/app/west.yml') }}
         timeout-minutes: 2
         continue-on-error: true
+      - name: Debug zmk-unicode module
+        run: |
+          set -eux
+          ls -la modules || true
+          ls -la modules/zmk-unicode || true
+          ls -la modules/zmk-unicode/zephyr || true
+          test -f modules/zmk-unicode/zephyr/module.yml || true
+          sed -n '1,120p' modules/zmk-unicode/zephyr/module.yml
       - name: build
         run: |
           if [ "$MIRYOKU_DEBUG" = 'MIRYOKU_DEBUG_TRUE' ]
