@@ -142,7 +142,7 @@ U_NP,              U_NP,              U_LT(U_MEDIA, ESC),U_LT(U_MOUSE, TAB),U_LT
 
 #define MIRYOKU_LAYER_LINUX \
 &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans,     \
-&trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &linux_oe /* ö / Ö */,    \
+U_NA,   &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &linux_oe /* ö / Ö */,    \
 &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans,     \
 &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans
 
