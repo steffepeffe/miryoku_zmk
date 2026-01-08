@@ -54,3 +54,9 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 &kp F11,           &kp F4,            &kp F5,            &kp F6,            &kp SLCK,          U_NA,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
 &kp F10,           &kp F1,            &kp F2,            &kp F3,            &kp PAUSE_BREAK,   U_NA,              &u_to_U_FUN,       &u_to_U_MEDIA,     &kp RALT,          U_NA,              \
 U_NP,              U_NP,              &kp K_APP,         &kp TAB,           &kp SPACE,         U_NA,              U_NA,              U_NA,              U_NP,              U_NP
+
+&uc {
+	default-mode = <UC_MODE_WIN_COMPOSE>;
+	win-compose-key = <RALT>;
+};
+
