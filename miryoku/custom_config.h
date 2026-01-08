@@ -16,7 +16,7 @@
   macros {
     linux_oe: linux_oe {
       compatible = "zmk,behavior-macro";
-      label = "LINUX_OE";
+	  #binding-cells = <0>;
       bindings = <
         &macro_tap &kp INS   // Compose key
         &macro_tap &kp DQT   // "
@@ -26,7 +26,7 @@
 
     linux_ae: linux_ae {
       compatible = "zmk,behavior-macro";
-      label = "LINUX_AE";
+	  #binding-cells = <0>;
       bindings = <
         &macro_tap &kp INS
         &macro_tap &kp DQT
@@ -36,7 +36,7 @@
 
     linux_ao: linux_ao {
       compatible = "zmk,behavior-macro";
-      label = "LINUX_AO";
+	  #binding-cells = <0>;
       bindings = <
         &macro_tap &kp INS
         &macro_tap &kp O
