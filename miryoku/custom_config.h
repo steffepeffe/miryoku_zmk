@@ -14,17 +14,27 @@
 
 / {
   macros {
-    linux_oe: linux_oe {
+    linux_oe_lower: linux_oe_lower {
       compatible = "zmk,behavior-macro";
-	  #binding-cells = <0>;
+      #binding-cells = <0>;
       bindings = <
-        &macro_tap &kp INS   // Compose key
-        &macro_tap &kp DQT   // "
-        &macro_tap &kp O     // o
+        &macro_tap &kp INS
+        &macro_tap &kp DQT
+        &macro_tap &kp O
       >;
     };
 
-    linux_ae: linux_ae {
+    linux_oe_upper: linux_oe_upper {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <
+        &macro_tap &kp INS
+        &macro_tap &kp DQT
+        &macro_tap &kp LS(O)
+      >;
+    };
+
+    linux_ae_lower: linux_ae_lower {
       compatible = "zmk,behavior-macro";
 	  #binding-cells = <0>;
       bindings = <
@@ -34,7 +44,17 @@
       >;
     };
 
-    linux_ao: linux_ao {
+    linux_ae_upper: linux_ae_upper {
+      compatible = "zmk,behavior-macro";
+	  #binding-cells = <0>;
+      bindings = <
+        &macro_tap &kp INS
+        &macro_tap &kp DQT
+        &macro_tap &kp LS(A)
+      >;
+    };
+
+    linux_ao_lower: linux_ao_lower {
       compatible = "zmk,behavior-macro";
 	  #binding-cells = <0>;
       bindings = <
@@ -42,8 +62,38 @@
         &macro_tap &kp O
         &macro_tap &kp A
       >;
+
+    linux_ao_upper: linux_ao_upper {
+      compatible = "zmk,behavior-macro";
+	  #binding-cells = <0>;
+      bindings = <
+        &macro_tap &kp INS
+        &macro_tap &kp O
+        &macro_tap &kp LS(A)
+      >;
+  };
+
+  behaviors {
+    linux_oe: linux_oe {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&linux_oe_lower>, <&linux_oe_upper>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    linux_ae: linux_ae {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&linux_ae_lower>, <&linux_ae_upper>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    linux_ao: linux_ao {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&linux_ao_lower>, <&linux_ao_upper>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
     };
   };
+
 };
 
 #define MIRYOKU_LAYERMAPPING_BASE( \
