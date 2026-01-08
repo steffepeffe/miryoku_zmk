@@ -12,17 +12,39 @@
 
 #define XXX &none
 
-ZMK_BEHAVIOR(linux_oe, macro,
-	bindings = <&kp INS &kp DQT &kp O>;
-)
+/ {
+  macros {
+    linux_oe: linux_oe {
+      compatible = "zmk,behavior-macro";
+      label = "LINUX_OE";
+      bindings = <
+        &macro_tap &kp INS   // Compose key
+        &macro_tap &kp DQT   // "
+        &macro_tap &kp O     // o
+      >;
+    };
 
-ZMK_BEHAVIOR(linux_ae, macro,
-	bindings = <&kp INS &kp DQT &kp A>;
-)
+    linux_ae: linux_ae {
+      compatible = "zmk,behavior-macro";
+      label = "LINUX_AE";
+      bindings = <
+        &macro_tap &kp INS
+        &macro_tap &kp DQT
+        &macro_tap &kp A
+      >;
+    };
 
-ZMK_BEHAVIOR(linux_ao, macro,
-	bindings = <&kp INS &kp O &kp A>;
-)
+    linux_ao: linux_ao {
+      compatible = "zmk,behavior-macro";
+      label = "LINUX_AO";
+      bindings = <
+        &macro_tap &kp INS
+        &macro_tap &kp O
+        &macro_tap &kp A
+      >;
+    };
+  };
+};
 
 #define MIRYOKU_LAYERMAPPING_BASE( \
      K00, K01, K02, K03, K04,      K05, K06, K07, K08, K09, \
