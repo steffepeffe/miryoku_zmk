@@ -2,6 +2,7 @@
 // https://github.com/manna-harbour/miryoku
 #include <behaviors.dtsi>
 #include <behaviors/unicode.dtsi>
+#include <zmk-unicode/keys-extra.h> 
 #include "../zmk-nodefree-config/helper.h"
 
 &uc {
