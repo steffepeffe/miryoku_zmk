@@ -62,6 +62,7 @@
         &macro_tap &kp O
         &macro_tap &kp A
       >;
+    };
 
     linux_ao_upper: linux_ao_upper {
       compatible = "zmk,behavior-macro";
@@ -71,6 +72,7 @@
         &macro_tap &kp O
         &macro_tap &kp LS(A)
       >;
+    };
   };
 
   behaviors {
