@@ -5,11 +5,6 @@
 #include <zmk-unicode/keys-extra.h> 
 #include "../zmk-nodefree-config/helper.h"
 
-&uc {
-	default-mode = <UC_MODE_WIN_COMPOSE>;
-	win-compose-key = <CAPS>;
-};
-
 #if defined (MIRYOKU_KEYBOARD_CORNE)
 
 #define dt_left &kp LC(LG(LEFT))
