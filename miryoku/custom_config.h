@@ -7,6 +7,7 @@
 
 &uc {
 	default-mode = <UC_MODE_WIN_COMPOSE>;
+	win-compose-key = <&kp CAPS>;
 };
 
 #if defined (MIRYOKU_KEYBOARD_CORNE)
