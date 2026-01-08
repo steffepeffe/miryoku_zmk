@@ -4,6 +4,10 @@
 #include <behaviors/unicode.dtsi>
 #include "../zmk-nodefree-config/helper.h"
 
+&uc {
+	default-mode = <UC_MODE_WIN_COMPOSE>;
+};
+
 #if defined (MIRYOKU_KEYBOARD_CORNE)
 
 #define dt_left &kp LC(LG(LEFT))
@@ -11,20 +15,16 @@
 
 #define XXX &none
 
-&uc {
-	default-mode = <UC_MODE_WIN_COMPOSE>;
-};
-
 #define MIRYOKU_LAYERMAPPING_BASE( \
      K00, K01, K02, K03, K04,      K05, K06, K07, K08, K09, \
      K10, K11, K12, K13, K14,      K15, K16, K17, K18, K19, \
      K20, K21, K22, K23, K24,      K25, K26, K27, K28, K29, \
      N30, N31, K32, K33, K34,      K35, K36, K37, N38, N39 \
 ) \
-     &uc UC_SET_LINUX  K00  K01  K02  K03  K04       K05  K06  K07  K08  K09  &uc 0xE5 0xC5 /* å / Å */ \
-     &uc UC_SET_WIN_COMPOSE  K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  &uc 0xE4 0xC4 /* ä / Ä */ \
-&kp LGUI  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  &kp SQT \
-                    K32  K33  K34       K35  K36  K37
+     &uc UC_SET_LINUX        K00  K01  K02  K03  K04       K05  K06  K07  K08  K09  &uc UC_SV_AO /* å / Å */ \
+     &uc UC_SET_WIN_COMPOSE  K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  &uc UC_SV_AE /* ä / Ä */ \
+     &kp LGUI                K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  &kp SQT \
+                                       K32  K33  K34       K35  K36  K37
 
 #define MIRYOKU_LAYERMAPPING_NAV( \
      K00, K01, K02, K03, K04,      K05, K06, K07, K08, K09, \
@@ -42,7 +42,7 @@
 
 #define MIRYOKU_LAYER_BASE \
 &kp Q,             &kp W,             &kp E,             &kp R,             &kp T,             &kp Y,             &kp U,             &kp I,             &kp O,             &kp P,     \
-&kp A,             U_MT(LALT, S),     U_MT(LCTRL, D),    U_MT(LSHFT, F),    &kp G,             &kp H,             U_MT(LSHFT, J),    U_MT(LCTRL, K),    U_MT(LALT, L),     &uc 0xF6 0xD6 /* ö / Ö */,    \
+&kp A,             U_MT(LALT, S),     U_MT(LCTRL, D),    U_MT(LSHFT, F),    &kp G,             &kp H,             U_MT(LSHFT, J),    U_MT(LCTRL, K),    U_MT(LALT, L),     &uc UC_SV_OE /* ö / Ö */,    \
 U_LT(U_BUTTON, Z), U_MT(RALT, X),     &kp C,             &kp V,             &kp B,             &kp N,             &kp M,             &kp COMMA,         U_MT(RALT, DOT),   U_LT(U_BUTTON, SLASH),\
 U_NP,              U_NP,              U_LT(U_MEDIA, ESC),U_LT(U_MOUSE, TAB),U_LT(U_NAV, SPACE),U_LT(U_SYM, RET),  U_LT(U_NUM, BSPC), U_LT(U_FUN, DEL),  U_NP,              U_NP
 
