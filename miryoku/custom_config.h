@@ -21,7 +21,7 @@ ZMK_BEHAVIOR(linux_ae, macro,
 )
 
 ZMK_BEHAVIOR(linux_ao, macro,
-	bindings = <&kp INS &kp o &kp A>;
+	bindings = <&kp INS &kp O &kp A>;
 )
 
 #define MIRYOKU_LAYERMAPPING_BASE( \
