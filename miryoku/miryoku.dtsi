@@ -26,6 +26,11 @@ MIRYOKU_LAYER_LIST
   };
 };
 
+&uc {
+	default-mode = <UC_MODE_WIN_COMPOSE>;
+	win-compose-key = <CAPS>;
+};
+
 #include "miryoku_shift_functions.dtsi"
 
 #include "miryoku_double_tap_guard.dtsi"
